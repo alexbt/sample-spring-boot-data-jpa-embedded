@@ -3,7 +3,9 @@ Spring Boot, Spring Data JPA and Embedded h2
 
 In almost all of my projects that involves external resources, I try my best to enable the application to fully run without dependencies.
 It's useful to provide a fully working backing 
-This sample project shows how a spring-boot application can be setup with an embedded SQL databass over JPA.
+This sample project shows how a spring-boot application can be setup with an embedded SQL database over JPA.
+The focus of this project is to show how to configure an embedded database with Spring Boot, however the source code also contains a RestController and a Spring Data Repository.
+
 
 
 Other sample projects with embedded databases 
@@ -85,4 +87,10 @@ CREATE TABLE MYTABLE
 ```
 INSERT INTO MODEL (ID, VAL) VALUES (1, 'TEST');
 ```
-If you go back to the h2-console, you should see your data. All that is left to do, is to create your jpaRepsitory like you would normally do, spring boot we'll wire it up using a datasource on your embedded database.
+If you go back to the h2-console, you should see your data. All that is left to do, is to create your JPARepsitory like you would normally do with Spring Data, spring boot we'll wire it up with a datasource pointing to the embedded database.
+
+Get the code - do it
+------------------------
+Clone the repository:
+
+    $ git clone https://github.com/alexturcot/sample-spring-boot-data-jpa-embedded.git
